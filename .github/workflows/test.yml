@@ -10,7 +10,7 @@ jobs:
   test:
     name: Test
     env:
-      PACKAGE_NAME: python_template
+      PACKAGE_NAME: RCrA
     runs-on: ubuntu-latest
     strategy:
       matrix:
