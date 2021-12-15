@@ -1,3 +1,3 @@
-# python_template
+# RCrA
 
 Analysis of RCrA.
