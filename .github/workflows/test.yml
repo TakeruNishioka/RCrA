@@ -25,8 +25,8 @@ jobs:
         run: |
           pip3 install poetry
           poetry install
-      - name: Lint by Flake8
-        run: poetry run flake8 tests ${{ env.PACKAGE_NAME }}
+      # - name: Lint by Flake8
+      #   run: poetry run flake8 tests ${{ env.PACKAGE_NAME }}
       - name: Format by Black
         run: poetry run black --check tests ${{ env.PACKAGE_NAME }}
       - name: Test by pytest
