@@ -14,8 +14,8 @@ restfreq = "230.538GHz"
 outframe = "lsrk"
 spw = "0~35"
 width = "0.2km/s"
-start = "-25km/s"
-nchan = 300
+start = "-35km/s"
+nchan = 400
 robust = 0.5
 phasecenter = "J2000 19h01m41 -36d57m00"
 
@@ -29,8 +29,8 @@ tclean(
     imsize=imsize,
     cell=cell,
     spw=spw,
-    weighting="briggs",
-    robust=robust,
+    weighting="natural",
+    # robust=robust,
     phasecenter=phasecenter,
     specmode="cube",
     restfreq=restfreq,
