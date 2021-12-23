@@ -5,12 +5,10 @@ beamsize_major = 7.889
 beamsize_minor = 4.887
 pa = -77.412
 
-chans = ["1", "398"]
-
 # find the RMS of a line free channel
-chanstat = imstat(imagename=dirty_imagename, chans=chans[0])
+chanstat = imstat(imagename=dirty_imagename, chans="1")
 rms1 = chanstat["rms"][0]
-chanstat = imstat(imagename=dirty_imagename, chans=chans[1])
+chanstat = imstat(imagename=dirty_imagename, chans="398")
 rms2 = chanstat["rms"][0]
 rms = 0.5 * (rms1 + rms2)
 
