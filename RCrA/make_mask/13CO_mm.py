@@ -1,6 +1,6 @@
 # mm => make mask
 
-dirty_imagename = "dirty/" + "RCrA_13CO_all_dirty.image"
+dirty_imagename = "dirty/" + "RCrA_13CO_all_cube_dirty.image"
 beamsize_major = 7.889
 beamsize_minor = 4.887
 pa = -77.412
