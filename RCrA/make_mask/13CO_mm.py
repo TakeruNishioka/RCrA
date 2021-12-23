@@ -8,7 +8,7 @@ pa = -77.412
 # find the RMS of a line free channel
 chanstat = imstat(imagename=dirty_imagename, chans="1")
 rms1 = chanstat["rms"][0]
-chanstat = imstat(imagename=dirty_imagename, chans="398")
+chanstat = imstat(imagename=dirty_imagename, chans="38")
 rms2 = chanstat["rms"][0]
 rms = 0.5 * (rms1 + rms2)
 
