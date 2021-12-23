@@ -8,12 +8,11 @@ pa = -77.412
 chans = ["1", "398"]
 
 # find the RMS of a line free channel
-rms_pchan = []
-for i in chans:
-    chanstat = imstat(imagename=dirty_imagename, chans=i)
-    rms = chanstat["rms"][0]
-    rms_pchan.append(rms)
-rms = sum(rms_pchan)
+chanstat = imstat(imagename=dirty_imagename, chans=chans[0])
+rms1 = chanstat["rms"][0]
+chanstat = imstat(imagename=dirty_imagename, chans=chans[1])
+rms2 = chanstat["rms"][0]
+rms = 0.5 * (rms1 + rms2)
 
 print("rms = " + str(rms) + "Jy/beam")
 
