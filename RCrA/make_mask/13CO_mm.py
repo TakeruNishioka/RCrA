@@ -8,16 +8,14 @@ pa = -77.412
 chans = ["1", "398"]
 
 # find the RMS of a line free channel
-def derive_rms(chans):
-    rms_pchan = []
-    for i in chans:
-        chanstat = imstat(imagename=dirty_imagename, chans=i)
-        rms = chanstat["rms"][0]
-        rms_pchan.append(rms)
-    rms = sum(rms_pchan)
+rms_pchan = []
+for i in chans:
+    chanstat = imstat(imagename=dirty_imagename, chans=i)
+    rms = chanstat["rms"][0]
+    rms_pchan.append(rms)
+rms = sum(rms_pchan)
 
-    print("rms = " + str(rms) + "Jy/beam")
-    return rms
+print("rms = " + str(rms) + "Jy/beam")
 
 
 def make_mask(times_sigma):
@@ -42,5 +40,4 @@ def make_mask(times_sigma):
     )
 
 
-rms = derive_rms(chans)
 make_mask(10)
