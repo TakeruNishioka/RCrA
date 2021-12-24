@@ -15,7 +15,7 @@ outframe = "lsrk"
 spw = "0~35"
 width = "0.2km/s"
 start = "-35km/s"
-nchan = 400
+nchan = 401
 robust = 0.5
 phasecenter = "J2000 19h01m41 -36d57m00"
 
